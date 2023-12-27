@@ -1,0 +1,72 @@
+.btn-holder {
+    display: flex;
+    
+    button {
+        border: 0;
+        width: 30px;
+        height: 30px;
+        background-color: #fff;
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        cursor: pointer;
+        transition: ease 0.25s;
+
+        &:hover {
+            background-color: #F3F3F3;
+        }
+    }
+}
+
+.todo-list-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.todo-list-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #C0C4DF;
+    padding-bottom: 8px;
+}
+
+.checkbox-holder {
+    position: relative;
+    width: 15px;
+    height: 15px;
+
+    input[type="checkbox"] {
+        margin: 0;
+        opacity: 0;
+
+        &:checked + span {
+            background-color: #C0C4DF;
+
+            &::after {
+                position: absolute;
+                width: 11px;
+                height: 11px;
+                content: '';
+                top: 2px;
+                left: 1px;
+                background-image: url('data:image/svg+xml; utf-8, <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.44901 6.55091L8.70825 2.29167L9.35643 2.93985L4.44901 7.84728L1.83325 5.23152L2.48143 4.58334L4.44901 6.55091Z" fill="%23000"/></svg>');
+            }
+        }
+    }
+
+    span {
+        width: 15px;
+        height: 15px;
+        background-color: #fff;
+        border: 1px solid #C0C4DF;
+        position: absolute;
+        top: 2px;
+        left: 0;
+        border-radius: 100%;
+        pointer-events: none;
+    }
+}

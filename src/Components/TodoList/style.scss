@@ -1,0 +1,101 @@
+.wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+
+    @media only screen and (max-width: 767px) {
+        height: auto;
+    }
+}
+
+.holder {
+    width: 500px;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 45px 0px rgba(0, 0, 0, 0.15);
+
+    @media only screen and (max-width: 767px) {
+        padding-left: 20px;
+        padding-right: 20px;
+        border-radius: 0;
+        box-shadow: none;
+    }
+}
+
+.mail-title {
+    font-size: 30px;
+    line-height: 38px;
+    font-weight: 500;
+    margin: 0 0 7px;
+}
+
+.add-form {
+    border: 1px solid #C0C4DF;
+    border-radius: 100px;
+    padding: 5px;
+    display: flex;
+    margin-bottom: 35px;
+
+    &.error {
+        border-color: red;
+    }
+
+    input[type="text"] {
+        padding: 5px 10px;
+        font-size: 15px;
+        line-height: 21px;
+        font-weight: 300;
+        color: #000;
+        margin: 0;
+        outline: none;
+        font-family: 'Outfit', sans-serif;
+        border: 0;
+        background-color: transparent;
+        flex-basis: 0;
+        flex-grow: 1;
+
+        &::placeholder {
+            color: #C1C4DF;
+        }
+
+        @media only screen and (max-width: 767px) {
+            font-size: 16px;
+        }
+    }
+
+    .btn-add {
+        border: 0;
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
+        outline: none;
+        font-family: 'Outfit', sans-serif;
+        font-size: 15px;
+        line-height: 140%;
+        color: #fff;
+        border-radius: 100px;
+        background: #3a3a3a;
+        padding: 4px 13px;
+        cursor: pointer;
+
+        &.btn-cancle {
+            background-color: red;
+            margin-left: 5px;
+        }
+    }
+
+}
+
+.todolist-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.error-message {
+    font-size: 12px;
+    margin-top: -30px;
+    margin-left: 17px;
+    color: red;
+}
